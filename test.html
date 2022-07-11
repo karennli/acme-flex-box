@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <style>
+      *{
+        font-family:Calibri;
+      }
+      #createUser, .person{
+        border:solid dimGray 2px;
+        border-radius:0.75rem;
+      }
+      header{
+        display:flex;
+        background-color:dodgerBlue;
+        color:white;
+        justify-content:space-between;
+        width:100%
+      }
+      header>h1{
+        margin:1rem;
+        flex-grow:1;
+      }
+      nav{
+        display:flex;
+        width 100%;
+        align-items:center;
+        justify-content:space-evenly;
+        flex-grow:5;
+      }
+      a{
+        margin:1rem;
+      }
+      main{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        color:dimGray;
+      }
+      #createUser{
+        padding:1rem;
+        width: 50%;
+      }
+      #createUser>h1{
+        line-height:10%;
+        margin-top:10px;
+      }
+      #inputs{
+        display:flex;
+        flex-direction:column;
+        margin:0.5rem;
+      }
+      #inputs>div{
+        margin:1rem 0;
+        display:flex;
+      }
+      label{
+        font-weight:bold; 
+        width:10rem;
+      }
+      input[type=text],select{
+        width:80%;
+      }
+      #buttons{
+        display:flex;
+        justify-content:center;
+      }
+      #users{
+        display:flex;
+        flex-wrap:wrap;
+      }
+      .person{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        flex-basis:30%;
+        padding:0.5rem;
+        margin:1rem;
+      }
+      .name{
+        margin-bottom: 0px;
+      }
+    @media(max-width: 600px){
+      header, nav, #buttons{
+        flex-direction:column;
+      }
+      nav{
+         align-items:start;
+         margin-bottom:1rem;
+      }
+      a{
+        line-height:10%;
+      }
+      #createUser{
+        width:90%;
+      }
+      .person{
+        flex-basis:100%
+      }
+    }
+    </style>
+  </head>
+
+<title>ACME layout</title>
+
+<header>
+  <h1>Acme Layout</h1>
+  <nav>
+    <a>Users</a>
+    <a>Departments</a>
+    <a>Contact</a>
+  </nav>
+</header>
+
+<h1 style="margin:1rem; color:dimGray;">Users</h1>
+
+<main>
+  <section id="createUser">
+    <h1 style="font-size:2rem;">Create A User</h1>
+    <div id="inputs">
+      <div>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" placeholder="Jane">
+      </div>     
+      <div>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" placeholder="Doe">
+      </div>
+      <div>
+        <label for="departments">Department:</label>
+        <select name="departments" id="departments">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        </select>
+      </div>
+    </div>
+    <div id="buttons">
+      <input type="reset" value="clear">   
+      <input type="submit" value="save" style="background-color:dodgerBlue; color:white;">
+    </div>
+  </section>
+  <section id="users">
+    <div class="person">
+      <h4 class="name">User A</h4>
+      <p>Some text for the user</p>
+    </div>
+    <div class="person">
+      <h4 class="name">User B</h4>
+      <p>Some text for the user. Some text for the user. Some text for the user.</p>
+    </div>
+    <div class="person">
+      <h4 class="name">User C</h4>
+      <p>Some text for the user</p>
+    </div>
+    <div class="person">
+      <h4 class="name">User D</h4>
+      <p>Some text for the user</p>
+    </div>
+    <div class="person">
+      <h4 class="name">User E</h4>
+      <p>Some text for the user</p>
+    </div>
+    <div class="person">
+      <h4 class="name">User F</h4>
+      <p>Some text for the user</p>
+    </div>
+    <div class="person">
+      <h4 class="name">User G</h4>
+      <p>Some text for the user</p>
+    </div>
+  </section>
+</main>
+</html>
